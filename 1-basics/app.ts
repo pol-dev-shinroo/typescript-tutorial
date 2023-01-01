@@ -1,22 +1,34 @@
-function add(a: number, b: number, showResult: boolean, phrase: string) {
-  // if (typeof a !== "number" || typeof b !== "number") {
-  //   // throw new Error("Incorrect input!");
-  // }
+const person: {
+  name: string;
+  age: number;
+  nickname: string;
+} = {
+  name: "paul",
+  age: 30,
+  nickname: "pol",
+};
 
-  const result = a + b;
-  if (showResult) {
-    console.log(phrase + "" + result);
-  } else {
-    return result;
-  }
-}
+console.log(person.name);
 
-let number1: number;
-number1 = 3;
-const number2 = 2.8;
-const printResult = true;
-let resultPhrase: number | string = "Result is";
-resultPhrase = 3;
-resultPhrase = "33";
+person.name = "asdf";
 
-add(number1, number2, printResult, resultPhrase);
+console.log(person.name);
+
+// nested object types
+const product: {
+  id: string;
+  price: number;
+  tags: string[];
+  details: {
+    title: string;
+    description: string;
+  };
+} = {
+  id: "abc1",
+  price: 12.99,
+  tags: ["great-offer", "hot-and-new"],
+  details: {
+    title: "Red Carpet",
+    description: "A great carpet - almost brand-new!",
+  },
+};
