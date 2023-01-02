@@ -28,3 +28,30 @@ tsc --watch or tsc -w
 ```
 
 - will run watch mode for all ts in the directory
+
+## exclude
+
+```
+  "exclude": ["test.ts", "*.dev.ts", "**/*.dev.ts", "node_modules"]
+```
+
+- exclude compilation for test.ts
+- exclude compilation for any file that starts with dev.ts pattern
+- exclude compilation for any file that starts with dev.ts pattern in any foler
+- exclude node modules (this is default)
+
+## include
+
+```
+  "include": ["app.ts"]
+```
+
+- include only app.ts for compilation
+
+## files
+
+```js
+  "files": ["app.ts"]
+```
+
+- same as include except here only files are accepted (good for smaller projects)
