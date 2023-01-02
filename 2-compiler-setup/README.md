@@ -22,3 +22,9 @@ tsc
 ```
 
 - will compile all ts to js in the directory where tsconfig is present
+
+```
+tsc --watch or tsc -w
+```
+
+- will run watch mode for all ts in the directory
