@@ -20,3 +20,11 @@ user1.greet("Hello");
 // 1) interface does not accept union types => they are therefore clearer
 // 2) interface are used to describe class (multiple interfaces can be implemented on a Class)
 // 3) when implemented on a class => interface set the miminum requirements for the class
+
+type NewPerson = {
+  name: string;
+};
+
+let user2: NewPerson;
+
+user2 = { name: "john" };
