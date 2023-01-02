@@ -1,23 +1,23 @@
 const myFunc = (n1: number, n2: number) => {
   return n1 + n2;
 };
-const myFunc2 = (n1: string[]) => {
+const myFunc2 = (n1: number) => {
   return n1;
 };
 
-// let clone;
+// callback=> passing function as parameters
 
-// clone = myFunc;
-// clone = 3;
+const addHandler = (
+  n1: number,
+  n2: number,
+  cb: (num: number) => number
+): number => {
+  const result = n1 + n2;
+  return cb(result);
+};
 
-// // this passes compilation but will throw run time error
-// console.log(clone(1, 2));
+// addHandler(1, 2, myFunc2);
 
-// let clone: Function;
-let clone: (a: number, b: number) => number; // compatibility check
-
-// clone = myFunc;
-clone = myFunc2;
-// clone = 3;
-
-console.log(clone(1, 2));
+addHandler(1, 3, (result) => {
+  return result;
+});
