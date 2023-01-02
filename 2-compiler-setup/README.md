@@ -55,3 +55,24 @@ tsc --watch or tsc -w
 ```
 
 - same as include except here only files are accepted (good for smaller projects)
+
+## compilationOptions
+
+- "how" ts will be compiled
+
+```json
+  "compilationOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "DOM",
+      "ES6",
+      "DOM.Iterable",
+      "ScriptHost"
+      ], // => these are set be default
+    "sourceMap": "true" // produce .map => you can then view ts even in the source at dev tool. => use this for debugging!!
+  },
+    "exclude": ["test.ts", "*.dev.ts", "**/*.dev.ts", "node_modules"],
+  "include": ["app.ts"],
+  "files": ["app.ts"]
+```
