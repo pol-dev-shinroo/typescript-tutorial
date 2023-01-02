@@ -24,7 +24,7 @@ class Department {
     console.log(this.employees);
   }
 }
-
+// instantiating
 class ITDepartment extends Department {
   constructor(name: string, id: string, public admins: string[]) {
     super(name, id);
