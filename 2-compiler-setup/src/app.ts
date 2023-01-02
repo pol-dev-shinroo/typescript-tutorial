@@ -1,5 +1,9 @@
-const app = (a: string, b: string) => {
-  let time;
-  time = "sdf";
-  return a + b + time;
-};
+const button = document.querySelector("button");
+
+if (button) {
+  button.addEventListener("click", () => {
+    let a: number;
+    a = 1;
+    console.log(a);
+  });
+}
