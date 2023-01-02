@@ -1,3 +1,4 @@
+// abstract class => a class that can't be instantiated, but has to be extended
 abstract class Department {
   // id: string;
   // name: string;
