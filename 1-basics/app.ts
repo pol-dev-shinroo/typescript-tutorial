@@ -20,3 +20,12 @@ const myName = add("paul", "kim", "as-text");
 console.log(ans);
 console.log(ans2);
 console.log(myName);
+
+// object example
+type User = { name: string; age: number };
+const user1: User = { name: "paul", age: 3 };
+
+const myFunc = (user: { name: string; age: number }) => {
+  return user.name;
+};
+console.log(myFunc({ name: "", age: 2 }));
