@@ -3,7 +3,7 @@ class Department {
   // name: string;
   private isListed: boolean;
   private employees: string[] = [];
-  // if readonly => cannot change this through methods
+  // if readonly => cannot change this outside the class + cannot be changed by methods??
   constructor(private readonly name: string, private id: string) {
     // this.name = n;
     // this.id = id;
