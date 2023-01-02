@@ -1,10 +1,8 @@
 class Department {
-  // id: string;
-  // name: string;
+  name: string;
   private employees: string[] = [];
-  constructor(private name: string, private id: string) {
-    // this.name = n;
-    // this.id = id;
+  constructor(n: string) {
+    this.name = n;
   }
   describe(this: Department) {
     // makes sure this is the instance of Department
@@ -20,7 +18,7 @@ class Department {
   }
 }
 
-const accounting = new Department("Accounting", "2");
+const accounting = new Department("Accounting");
 
 accounting.addEmployee("df");
 
