@@ -1,26 +1,23 @@
-// typescript is also able to infer the return type // or specify the return type as so
-const add = (n1: number, n2: number): number => {
+const myFunc = (n1: number, n2: number) => {
+  return n1 + n2;
+};
+const myFunc2 = (n1: string[]) => {
   return n1;
 };
 
-// if a function does not return => it is void type
-const printResult = (n: number) => {
-  console.log("result" + n);
-};
+// let clone;
 
-// if you deliberatly set no return
-const test = (n: number): void => {};
+// clone = myFunc;
+// clone = 3;
 
-// this is not the same as undefined.
-// const hi = (n: number): undefined => {};
+// // this passes compilation but will throw run time error
+// console.log(clone(1, 2));
 
-// for this to work you need to return undefined
-const fix = (n: number): undefined => {
-  return undefined;
-};
+// let clone: Function;
+let clone: (a: number, b: number) => number; // compatibility check
 
-// returns undefined => printResult is void
-printResult(add(1, 2));
-// console.log(printResult(add(1, 2)));
+// clone = myFunc;
+clone = myFunc2;
+// clone = 3;
 
-let someValue: undefined;
+console.log(clone(1, 2));
