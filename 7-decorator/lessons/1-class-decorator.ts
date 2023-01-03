@@ -1,3 +1,5 @@
+// meta programming
+
 const Logger = (constructor: Function) => {
   console.log("logging");
   console.log(constructor);
