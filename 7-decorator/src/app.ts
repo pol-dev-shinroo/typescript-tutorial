@@ -1,9 +1,12 @@
-const Logger = (constructor: Function) => {
-  console.log("logging");
-  console.log(constructor);
+const Logger = (logString: string) => {
+  return function (constructor: Function) {
+    console.log("logging");
+    console.log(constructor);
+    console.log(logString);
+  };
 };
 
-@Logger
+@Logger("Logging-Person")
 class Person {
   name = "Max";
   constructor() {
@@ -11,4 +14,4 @@ class Person {
   }
 }
 
-const pers = new Person();
+// const pers = new Person();
