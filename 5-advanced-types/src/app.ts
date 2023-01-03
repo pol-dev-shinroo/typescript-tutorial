@@ -1,32 +1,11 @@
-interface Bird {
-  type: "bird";
-  flyingSpeed: number;
+const button = document.querySelector("button");
+
+// const userInput = <HTMLInputElement>document.getElementById("user-Input")!;
+// const userInput = document.getElementById("user-Input")! as HTMLInputElement;
+const userInput = document.getElementById("user-Input");
+
+if (userInput) {
+  (userInput as HTMLInputElement).value = "Hi there";
 }
 
-interface Horse {
-  type: "horse";
-  runningSpeed: number;
-}
-
-type Animal = Bird | Horse;
-
-function moveAnimal(animal: Animal) {
-  // if ("flyingSpeed" in animal) {
-  //   console.log("speed" + animal.flyingSpeed);
-  // }
-  // if ("runningSpeed" in animal) {
-  //   console.log("speed" + animal.runningSpeed);
-  // }
-  let speed;
-  switch (animal.type) {
-    case "bird":
-      speed = animal.flyingSpeed;
-      break;
-    case "horse":
-      speed = animal.runningSpeed;
-      break;
-    default:
-      break;
-  }
-  return speed;
-}
+// userInput.value = "Hi there";
